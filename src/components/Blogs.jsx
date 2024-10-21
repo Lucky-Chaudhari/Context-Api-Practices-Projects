@@ -9,7 +9,7 @@ const Blogs=()=> {
   const{posts,loading} = useContext(AppContext);
 
   return (
-    <div className='w-11/12 max-w-[670px] py-8  h-screen flex flex-col gap-y-7 mt-[60px] mb-[70px] justify-center items-center'>
+    <div className='w-11/12 max-w-[670px] py-5 flex flex-col gap-y-7 mt-[60px] mb-[70px] justify-center items-center'>
 {
   loading ?
 

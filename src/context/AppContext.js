@@ -17,10 +17,9 @@ export default  function AppContextProvider({children})  {
   const[totalPages, setTotalPages] = useState(null);
 
 //data filling pending
-async function fetchData (page = 1) {
+async function fetchData(page = 1) {
   setLoading(true);
-
-    let url =`${baseUrl}? page=${page}`;
+    let url =`${baseUrl}?page=${page}`;
   try {
     const result = await fetch(url);
     const data = await result.json();
@@ -38,7 +37,7 @@ async function fetchData (page = 1) {
 setLoading(false)
 
 }
-function handlePageChange(page) {
+function handlePageChange(page=1) {
   setPage(page);
   fetchData(page);
 }
